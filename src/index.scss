@@ -1,0 +1,21 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer components {
+  .textfield {
+    @apply relative;
+    label {
+      @apply absolute bg-black text-white left-4 -top-3 px-1;
+    }
+    input {
+      @apply w-full bg-transparent outline-none p-4 text-white shadow-outline rounded-[5px];
+      &:focus {
+        box-shadow: 0 0 0 3px white;
+      }
+      &:not([value=""]) {
+        box-shadow: 0 0 0 3px #00a3ff;
+      }
+    }
+  }
+}
