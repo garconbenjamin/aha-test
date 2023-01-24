@@ -2,6 +2,14 @@
 @tailwind components;
 @tailwind utilities;
 
+@layer {
+  * {
+    -webkit-text-size-adjust: none;
+  }
+  body {
+    font-family: "Inter", sans-serif;
+  }
+}
 @layer components {
   .textfield {
     @apply relative;
@@ -19,3 +27,4 @@
     }
   }
 }
+@import "./styles/datepicker-override.scss";

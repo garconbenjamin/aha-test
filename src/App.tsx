@@ -1,8 +1,10 @@
 import React, { useEffect, useState } from "react";
 import { CheckCircleIcon as CheckFill } from "@heroicons/react/24/solid";
 import { CheckCircleIcon as Check } from "@heroicons/react/24/outline";
-
+import CustomDatePicker from "./components/CustomDatePicker";
+import Input from "./components/Input";
 import "./App.css";
+
 const rules = [
   { message: "Have at least one uppercase letter", pattern: /[A-Z]/ },
   { message: "Have at least one lowercase letter", pattern: /[a-z]/ },
@@ -13,26 +15,27 @@ const rules = [
   },
   { message: "Longer than 8 characters", pattern: /.{8,}/ },
 ];
+
 function App() {
   const [password, setPassword] = useState("");
   const [validatFlags, setValidatFlags] = useState<boolean[]>([]);
+
   useEffect(() => {
     const result = rules.map(({ pattern }) => Boolean(pattern.test(password)));
     setValidatFlags(result);
   }, [password]);
+
   return (
     <div className="App">
-      <div className="bg-black pt-10 text-white">
+      <div className="bg-black pt-10 text-white flex min-h-screen">
         <div className="w-[335px] mx-auto">
-          <div className="textfield">
-            <label>Password</label>
-            <input
-              type="text"
-              onChange={(e) => setPassword(e.target.value)}
-              value={password}
-              placeholder="Password"
-            />
-          </div>
+          <Input
+            label="password"
+            type="password"
+            placeholder="Password"
+            value={password}
+            onChange={setPassword}
+          />
           <div className="mt-5 py-2 bg-[#242424] rounded-xl">
             <ul className="">
               {rules.map(({ message }, i) => {
@@ -50,6 +53,9 @@ function App() {
               })}
             </ul>
           </div>
+        </div>
+        <div className="w-[320px] mx-auto">
+          <CustomDatePicker label="Birthday" />
         </div>
       </div>
     </div>

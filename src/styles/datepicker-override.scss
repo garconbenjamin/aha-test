@@ -1,0 +1,99 @@
+$primary: #00a3ff;
+.react-datepicker {
+  font-family: "Inter", sans-serif;
+  padding: 17px 16px 16px;
+  background-color: #1b1b1b !important;
+  border: none;
+
+  .react-datepicker__header.react-datepicker__header--custom {
+    background: transparent;
+    border: none;
+    padding: 0;
+  }
+  [class$="day-names"] {
+    line-height: 13px;
+    border-bottom: none;
+    margin-bottom: 12px;
+    display: flex;
+    column-gap: 6px;
+    [class$="day-name"] {
+      font-size: 11px;
+      transform: scale(calc(11 / 12));
+      color: rgba(white, 0.5);
+      width: 36px;
+      height: 13px;
+      line-height: 13px;
+      margin: 0;
+    }
+  }
+  .react-datepicker__week {
+    display: flex;
+    column-gap: 6px;
+  }
+  .react-datepicker__day {
+    color: white;
+    width: 36px;
+    height: 36px;
+    font-size: 14px;
+    line-height: 36px;
+    margin: 0;
+    &.react-datepicker__day--selected {
+      background-color: $primary !important;
+      color: white !important;
+    }
+    &.react-datepicker__day--highlighted {
+      background-color: transparent;
+      box-shadow: 0 0 0 1px $primary inset;
+      &:hover {
+        background-color: white;
+      }
+    }
+    &:not([class*="disabled"]) {
+      &:hover {
+        color: black;
+      }
+    }
+    &.react-datepicker__day--disabled,
+    &.react-datepicker__day--outside-month {
+      color: rgba(white, 0.5) !important;
+    }
+    @apply rounded-full;
+  }
+  .react-datepicker__month-container {
+    margin-bottom: 20px;
+  }
+  .react-datepicker__month {
+    margin: 0;
+  }
+
+  // year picker
+  .react-datepicker__year-text--keyboard-selected {
+    color: white !important;
+    background-color: $primary !important;
+    &:hover {
+      background-color: initial;
+    }
+  }
+  .react-datepicker__year-text--today {
+    font-weight: initial;
+  }
+  .react-datepicker__year-wrapper {
+    max-width: 240px;
+    row-gap: 24px;
+
+    @apply justify-center text-base;
+    .react-datepicker__year-text {
+      @apply rounded-sm;
+      width: 60px;
+      height: 24px;
+      line-height: 24px;
+      margin: 0 !important;
+      color: white;
+      &:not([class$="--disabled"]) {
+        &:hover {
+          color: black;
+        }
+      }
+    }
+  }
+}
