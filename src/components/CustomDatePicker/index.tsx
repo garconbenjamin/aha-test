@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useEffect, useState, useRef, HtmlHTMLAttributes } from "react";
 
 import Header from "./_header";
 import Footer from "./_footer";
@@ -16,6 +16,7 @@ const CustomDatePicker = (props: { label: string }) => {
   return (
     <DatePicker
       customInput={<Input label={label} />}
+      placeholderText="mm/dd/yyyy"
       selected={tempDate}
       value={selectedDate ? moment(selectedDate).format("DD/MM/yyyy") : ""}
       highlightDates={selectedDate && tempDate && [selectedDate]}

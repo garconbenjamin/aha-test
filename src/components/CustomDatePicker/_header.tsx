@@ -1,5 +1,5 @@
 import React from "react";
-import { ChevronLeftIcon, ChevronRightIcon } from "@heroicons/react/24/solid";
+import { ChevronLeft, ChevronRight } from "../Icon";
 
 import moment from "moment";
 import { ReactDatePickerCustomHeaderProps } from "react-datepicker";
@@ -26,12 +26,13 @@ const Header = ({
           {moment(date).format("MMM, YYYY")}
         </div>
       </div>
-      <div className="flex justify-between items-center mb-6">
+      <div className="year-controller flex justify-between items-center mb-6">
         <button
           onClick={showYearPicker ? decreaseYear : decreaseMonth}
           disabled={prevMonthButtonDisabled}
+          className="p-3"
         >
-          <ChevronLeftIcon className="w-5 h-5" />
+          <ChevronLeft />
         </button>
         <button
           onClick={() => setShowYearPicker(!showYearPicker)}
@@ -42,8 +43,9 @@ const Header = ({
         <button
           onClick={showYearPicker ? increaseYear : increaseMonth}
           disabled={nextMonthButtonDisabled}
+          className="p-3"
         >
-          <ChevronRightIcon className="w-5 h-5" />
+          <ChevronRight />
         </button>
       </div>
     </div>

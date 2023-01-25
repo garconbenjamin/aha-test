@@ -10,19 +10,26 @@
     font-family: "Inter", sans-serif;
   }
 }
+
+@mixin shadow-outline($color) {
+  box-shadow: 0 0 0 3px $color inset;
+}
 @layer components {
   .textfield {
     @apply relative;
     label {
-      @apply absolute bg-black text-white left-4 -top-3 px-1;
+      @apply absolute bg-darkModeBg text-white text-xs px-1;
+      left: 12px;
+      top: -2px;
+      line-height: 0.75rem;
     }
     input {
-      @apply w-full bg-transparent outline-none p-4 text-white shadow-outline rounded-[5px];
+      @apply w-full bg-transparent outline-none py-[calc(1rem+1px)] px-3 text-white shadow-outline rounded-[8px];
       &:focus {
-        box-shadow: 0 0 0 3px white;
-      }
-      &:not([value=""]) {
-        box-shadow: 0 0 0 3px #00a3ff;
+        @include shadow-outline(white);
+        &:not([value=""]) {
+          @include shadow-outline(#00a3ff);
+        }
       }
     }
   }

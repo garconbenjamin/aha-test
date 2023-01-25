@@ -1,10 +1,23 @@
 $primary: #00a3ff;
+
+.year-controller {
+  width: calc(100% + 32px);
+  margin-left: -16px;
+}
+.react-datepicker-popper {
+  padding-top: 14px !important;
+}
 .react-datepicker {
   font-family: "Inter", sans-serif;
   padding: 17px 16px 16px;
   background-color: #1b1b1b !important;
+  box-shadow: 4px 4px 20px rgba(0, 0, 0, 0.3);
+  border-radius: 10px;
   border: none;
 
+  .react-datepicker__triangle {
+    display: none;
+  }
   .react-datepicker__header.react-datepicker__header--custom {
     background: transparent;
     border: none;
@@ -37,6 +50,7 @@ $primary: #00a3ff;
     font-size: 14px;
     line-height: 36px;
     margin: 0;
+    &.react-datepicker__day--keyboard-selected,
     &.react-datepicker__day--selected {
       background-color: $primary !important;
       color: white !important;

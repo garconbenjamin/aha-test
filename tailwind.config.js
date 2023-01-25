@@ -39,6 +39,9 @@ module.exports = {
       fuchsia: colors.fuchsia,
       pink: colors.pink,
       rose: colors.rose,
+      darkModeBg: "#181818",
+      primaryLight: "#00D1FF",
+      primaryMain: "#00A3FF",
     }),
     columns: {
       auto: "auto",
@@ -218,7 +221,7 @@ module.exports = {
       "2xl": "0 25px 50px -12px rgb(0 0 0 / 0.25)",
       inner: "inset 0 2px 4px 0 rgb(0 0 0 / 0.05)",
       none: "none",
-      outline: "0 0 0 1px white",
+      outline: "0 0 0 3px rgb(255 255 255 / 0.5) inset",
     },
     boxShadowColor: ({ theme }) => theme("colors"),
     caretColor: ({ theme }) => theme("colors"),
