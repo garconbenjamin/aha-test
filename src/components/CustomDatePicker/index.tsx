@@ -19,7 +19,7 @@ const CustomDatePicker = (props: { label: string }) => {
         customInput={<Input label={label} editable={true} />}
         placeholderText="mm/dd/yyyy"
         selected={tempDate}
-        value={selectedDate ? moment(selectedDate).format("DD/MM/yyyy") : ""}
+        value={selectedDate ? moment(selectedDate).format("MM/DD/yyyy") : ""}
         highlightDates={selectedDate && tempDate && [selectedDate]}
         maxDate={new Date()}
         fixedHeight
