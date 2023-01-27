@@ -1,0 +1,15 @@
+{
+  "files": {
+    "main.css": "/aha-test/static/css/main.04688cb1.css",
+    "main.js": "/aha-test/static/js/main.6f687658.js",
+    "static/js/787.2fa5d007.chunk.js": "/aha-test/static/js/787.2fa5d007.chunk.js",
+    "index.html": "/aha-test/index.html",
+    "main.04688cb1.css.map": "/aha-test/static/css/main.04688cb1.css.map",
+    "main.6f687658.js.map": "/aha-test/static/js/main.6f687658.js.map",
+    "787.2fa5d007.chunk.js.map": "/aha-test/static/js/787.2fa5d007.chunk.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.04688cb1.css",
+    "static/js/main.6f687658.js"
+  ]
+}
