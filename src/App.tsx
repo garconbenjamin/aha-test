@@ -22,7 +22,7 @@ function App() {
             <TextValidationList text={password} rules={PASSWORD_RULES} />
           </div>
         </div>
-        <div className="w-[320px] mx-auto">
+        <div className="w-[335px] mx-auto">
           <CustomDatePicker label="Birthday" />
         </div>
       </div>

@@ -20,13 +20,13 @@ const Header = ({
 }) => {
   return (
     <div className="text-white">
-      <div className="text-left ml-1 mb-6">
+      <div className="text-left ml-2 mb-[15px]">
         <div className="text-base mb-1">Text</div>
         <div className="text-[2rem] leading-[1.375] font-bold">
           {moment(date).format("MMM, YYYY")}
         </div>
       </div>
-      <div className="year-controller flex justify-between items-center mb-6">
+      <div className="year-controller flex justify-between items-center mb-2">
         <button
           onClick={showYearPicker ? decreaseYear : decreaseMonth}
           disabled={prevMonthButtonDisabled}
