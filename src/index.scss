@@ -16,7 +16,8 @@
 }
 @layer components {
   .textfield {
-    @apply relative;
+    // @apply relative;
+    position: relative;
     label {
       @apply absolute bg-darkModeBg text-white text-xs px-1;
       left: 12px;
@@ -25,6 +26,7 @@
     }
     input {
       @apply w-full bg-transparent outline-none py-[calc(1rem+1px)] px-3 text-white shadow-outline rounded-[8px];
+      width: 100%;
       &:focus {
         @include shadow-outline(white);
         &:not([value=""]) {
