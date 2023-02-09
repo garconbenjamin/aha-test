@@ -30,7 +30,8 @@ const Input = forwardRef<
         ref={ref}
         readOnly={editable}
         onChange={(e) => onChange && onChange(e.target.value)}
-        value={type === "password" ? "*".repeat(value?.length || 0) : value}
+        value={value}
+        type={type}
         placeholder={placeholder}
       />
     </div>
