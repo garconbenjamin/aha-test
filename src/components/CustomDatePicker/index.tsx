@@ -21,7 +21,6 @@ const CustomDatePicker = (props: { label: string }) => {
         selected={tempDate}
         value={selectedDate ? moment(selectedDate).format("MM/DD/yyyy") : ""}
         highlightDates={selectedDate && tempDate && [selectedDate]}
-        maxDate={new Date()}
         fixedHeight
         onChange={() => null}
         onSelect={(date: Date) => {
